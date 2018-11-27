@@ -5,15 +5,6 @@ import com.google.common.base.Strings;
 import com.google.common.io.CharStreams;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
-import org.slf4j.Logger;
-
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 import com.sap.cloud.s4hana.examples.addressmgr.commands.CreateAddressCommand;
 import com.sap.cloud.s4hana.examples.addressmgr.commands.DeleteAddressCommand;
 import com.sap.cloud.s4hana.examples.addressmgr.commands.UpdateAddressCommand;
@@ -22,6 +13,14 @@ import com.sap.cloud.sdk.cloudplatform.logging.CloudLoggerFactory;
 import com.sap.cloud.sdk.s4hana.datamodel.odata.namespaces.businesspartner.BusinessPartnerAddress;
 import com.sap.cloud.sdk.s4hana.datamodel.odata.services.BusinessPartnerService;
 import com.sap.cloud.sdk.s4hana.datamodel.odata.services.DefaultBusinessPartnerService;
+import org.slf4j.Logger;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 @WebServlet("/api/addresses")
 public class AddressServlet extends HttpServlet {
