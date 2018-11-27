@@ -98,7 +98,7 @@ public class AddressServlet extends HttpServlet {
 
         if(!validateInputForUpdate(addressFromBody, businessPartnerId, addressId)) {
             logger.warn("Invalid request to update: at least one mismatch between body and query, query was: {}" +
-                    "; and parsed body was: {}.", request.getQueryString(), addressFromBody);
+                            "; and parsed body was: {}.", request.getQueryString(), addressFromBody);
             response.sendError(HttpServletResponse.SC_BAD_REQUEST,
                     "Address in body must have none or matching identifiers.");
             return;
@@ -142,7 +142,7 @@ public class AddressServlet extends HttpServlet {
     private boolean validateInputForUpdate(BusinessPartnerAddress addressFromBody, String businessPartnerId,
                                            String addressId) {
         return (addressFromBody.getBusinessPartner() == null
-                || addressFromBody.getBusinessPartner().equals(businessPartnerId)) &&
+                    || addressFromBody.getBusinessPartner().equals(businessPartnerId)) &&
                 (addressFromBody.getAddressID() == null || addressFromBody.getAddressID().equals(addressId));
     }
 
