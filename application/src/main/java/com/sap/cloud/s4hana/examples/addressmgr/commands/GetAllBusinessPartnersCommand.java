@@ -63,5 +63,4 @@ public class GetAllBusinessPartnersCommand  extends CachingErpCommand<List<Busin
                 .orderBy(BusinessPartner.LAST_NAME, Order.ASC)
                 .execute();
     }
-
 }
