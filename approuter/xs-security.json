@@ -1,5 +1,5 @@
 {
-  "xsappname": "address-manager-p1941979500trial",
+  "xsappname": "address-manager-<subaccount_id>",
   "tenant-mode": "shared",
   "scopes": [{
     "name": "$XSAPPNAME.ViewAddresses",
